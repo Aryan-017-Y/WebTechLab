@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>College Event Registration Form</title>
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #6dd5fa, #2980b9);
+        margin: 0;
+        padding: 40px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 38px;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        letter-spacing: 1px;
+    }
+
+    table {
+        width: 65%;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    th {
+        text-align: left;
+        padding: 18px;
+        background: linear-gradient(135deg, #43cea2, #185a9d);
+        color: white;
+        font-size: 22px;
+        letter-spacing: 0.5px;
+    }
+
+    td {
+        padding: 15px 20px;
+        font-size: 18px;
+        color: #333;
+        vertical-align: top;
+    }
+
+    /* 🎨 Input box styling */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #bbb;
+        border-radius: 6px;
+        background-color: #f0fff4; /* soft greenish-white box color */
+        transition: 0.3s;
+        box-sizing: border-box;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #43cea2;
+        background-color: #e8fff1;
+        box-shadow: 0 0 8px rgba(67, 206, 162, 0.6);
+        outline: none;
+    }
+
+    /* 🎮 Buttons */
+    input[type="submit"],
+    input[type="reset"] {
+        background-color: #43cea2;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 18px;
+        margin: 10px;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+        background-color: #2b7a78;
+        transform: scale(1.05);
+    }
+
+    textarea {
+        resize: vertical;
+        height: 100px;
+    }
+
+    .radio, .checkbox {
+        width: auto;
+        margin-right: 8px;
+        accent-color: #43cea2;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 20px;
+        color: #fff;
+        font-size: 16px;
+        opacity: 0.9;
+    }
+
+    /* 📱 Responsive Design */
+    @media screen and (max-width: 768px) {
+        table {
+            width: 90%;
+        }
+        h1 {
+            font-size: 30px;
+        }
+        td {
+            font-size: 16px;
+        }
+    }
+</style>
+</head>
+<body>
+<h1>College Event Registration Form</h1>
+<form action="#" method="post">
+    <table>
+        <tr>
+            <th colspan="2">Personal Information</th>
+        </tr>
+        <tr>
+            <td>First Name:</td>
+            <td><input type="text" name="firstname" placeholder="Enter your first name" required></td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><input type="text" name="lastname" placeholder="Enter your last name" required></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" name="email" placeholder="Enter your email" required></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password" placeholder="Create a password" required></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>
+                <input type="radio" name="gender" value="male" class="radio"> Male
+                <input type="radio" name="gender" value="female" class="radio"> Female
+                <input type="radio" name="gender" value="other" class="radio"> Other
+            </td>
+        </tr>
+        <tr>
+            <td>College Name:</td>
+            <td><input type="text" name="college" placeholder="Enter your college name"></td>
+        </tr>
+        <tr>
+            <td>Department:</td>
+            <td><input type="text" name="department" placeholder="Enter your department"></td>
+        </tr>
+        <tr>
+            <td>Event You’re Registering For:</td>
+            <td>
+                <select name="event">
+                    <option value="tech_quiz">Tech Quiz</option>
+                    <option value="gaming">E-Gaming Tournament</option>
+                    <option value="dance">Dance Battle</option>
+                    <option value="music">Battle of Bands</option>
+                    <option value="art">Art Exhibition</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Hobbies / Interests:</td>
+            <td>
+                <input type="checkbox" name="hobbies" value="reading" class="checkbox"> Reading
+                <input type="checkbox" name="hobbies" value="sports" class="checkbox"> Sports
+                <input type="checkbox" name="hobbies" value="music" class="checkbox"> Music
+                <input type="checkbox" name="hobbies" value="coding" class="checkbox"> Coding
+            </td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><textarea name="address" placeholder="Enter your full address"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+            </td>
+        </tr>
+    </table>
+</form>
+
+<div class="footer">
+    © 2025 College Fest Committee. All rights reserved.
+</div>
+</body>
+</html>
